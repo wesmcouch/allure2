@@ -2,7 +2,7 @@ import {SafeString} from 'handlebars/runtime';
 
 export default function attachmentUri(source) {
   let sourceUri;
-  if (source.indexOf('http') === 0) {
+  if (source !== undefined && source !== null && source.indexOf('http') === 0) {
     sourceUri = source;
   } else {
     sourceUri = 'data/attachments/' + source;
